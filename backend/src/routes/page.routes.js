@@ -17,7 +17,7 @@ router.get('/', async (req, res) => {
 })
 
 /**
- * GET page by slug + sections
+ * GET page by slug + sections  ✅ USE THIS
  */
 router.get('/:slug', async (req, res) => {
   try {
@@ -57,7 +57,6 @@ router.post('/', async (req, res) => {
       return res.status(400).json({ error: 'title and slug required' })
     }
 
-    // slug normalize
     slug = slug.toLowerCase().trim().replace(/\s+/g, '-')
 
     const result = await db.query(
@@ -80,7 +79,7 @@ router.post('/', async (req, res) => {
 })
 
 /**
- * UPDATE page (title + SEO + status)
+ * UPDATE page
  */
 router.put('/:id', async (req, res) => {
   try {
@@ -123,5 +122,6 @@ router.delete('/:id', async (req, res) => {
 })
 
 module.exports = router
+
 
 

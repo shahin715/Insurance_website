@@ -66,41 +66,46 @@ export default function Navbar() {
             {/* Desktop Menu */}
             <nav className="hidden md:flex items-center gap-8 text-white text-sm font-medium">
 
-              {/* ✅ MENU → OPEN PUBLIC SITE */}
+              {/* ✅ ADMIN INTERNAL NAVIGATION */}
               {menu.map(item => (
-                <a
+                <Link
                   key={item.id}
-                  href={`http://localhost:3000${item.href}`}
-                  target="_blank"
-                  rel="noopener noreferrer"
+                  href={item.href}
                   className="hover:text-purple-200 transition"
                 >
                   {item.label}
-                </a>
+                </Link>
               ))}
 
               {settings && (
                 <>
-                  {/* CTA → public site */}
-                  <a
-                    href={`http://localhost:3000${settings.cta_link}`}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
+                  {/* CTA → admin internal */}
+                  <Link href={settings.cta_link}>
                     <button className="relative px-7 py-2.5 border border-white rounded-full group overflow-hidden">
                       <span className="absolute inset-0 bg-white scale-x-0 group-hover:scale-x-100 transition origin-left"></span>
                       <span className="relative z-10 group-hover:text-black">
                         {settings.cta_text}
                       </span>
                     </button>
-                  </a>
+                  </Link>
 
-                  {/* Admin quick edit icon */}
+                  {/* Admin quick edit */}
                   <Link href="/hero-editor" title="Edit Hero">
                     <span className="ml-3 text-lg opacity-80 hover:opacity-100">
                       ⚙️
                     </span>
                   </Link>
+
+                  {/* Optional: Preview public site */}
+                  {/*
+                  <a
+                    href="http://localhost:3000"
+                    target="_blank"
+                    className="ml-2 text-xs underline"
+                  >
+                    Preview
+                  </a>
+                  */}
                 </>
               )}
 
@@ -121,32 +126,27 @@ export default function Navbar() {
         <div className={`${menuOpen ? "max-h-96" : "max-h-0"} md:hidden overflow-hidden transition-all`}>
           <div className="px-6 pb-6 pt-4 space-y-4 text-white">
 
-            {/* ✅ MENU → PUBLIC SITE */}
             {menu.map(item => (
-              <a
+              <Link
                 key={item.id}
-                href={`http://localhost:3000${item.href}`}
-                target="_blank"
-                rel="noopener noreferrer"
+                href={item.href}
                 onClick={() => setMenuOpen(false)}
                 className="block"
               >
                 {item.label}
-              </a>
+              </Link>
             ))}
 
             {settings && (
               <>
-                <a
-                  href={`http://localhost:3000${settings.cta_link}`}
-                  target="_blank"
-                  rel="noopener noreferrer"
+                <Link
+                  href={settings.cta_link}
                   onClick={() => setMenuOpen(false)}
                 >
                   <button className="w-full border border-white rounded-full py-3">
                     {settings.cta_text}
                   </button>
-                </a>
+                </Link>
 
                 <Link
                   href="/hero-editor"
@@ -165,3 +165,4 @@ export default function Navbar() {
     </header>
   );
 }
+

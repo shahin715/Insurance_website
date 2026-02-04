@@ -1,8 +1,6 @@
+import { redirect } from "next/navigation";
 
-export default function Home() {
-  return (
-    <div style={{padding:20}}>
-      Frontend running. Go to /home
-    </div>
-  )
+export default function Page() {
+  redirect("/home");
 }
+
