@@ -4,40 +4,38 @@ const router = require("express").Router();
 const upload = require("../config/multer");
 const sharp = require("sharp");
 
-// ✅ auto create folders
-fs.mkdirSync(path.join(__dirname, "../../uploads/tmp"), { recursive: true });
-fs.mkdirSync(path.join(__dirname, "../../uploads/hero"), { recursive: true });
+// auto create folders
+const ensure = (p) => fs.mkdirSync(p, { recursive: true });
 
-router.post("/hero", upload.single("file"), async (req, res) => {
+router.post("/:folder", upload.single("file"), async (req, res) => {
   try {
-    if (!req.file) {
-      return res.status(400).json({ error: "No file uploaded" });
-    }
-
+    const folder = req.params.folder;   // hero / about / sections
     const tmpPath = req.file.path;
 
-    const filename = "hero_" + Date.now() + ".webp";
-    const finalPath = path.join(__dirname, "../../uploads/hero", filename);
+    const finalDir = path.join(__dirname, "../../uploads", folder);
+    ensure(finalDir);
 
-    // ✅ resize + compress + convert
+    const filename = folder + "_" + Date.now() + ".webp";
+    const finalPath = path.join(finalDir, filename);
+
     await sharp(tmpPath)
-      .resize({ width: 1920 })
+      .resize({ width: 1600 })
       .webp({ quality: 82 })
       .toFile(finalPath);
 
-    // ✅ delete temp file
     fs.unlinkSync(tmpPath);
 
     res.json({
-      url: `/uploads/hero/${filename}`
+      url: `/uploads/${folder}/${filename}`
     });
 
   } catch (err) {
-    console.error("UPLOAD ERROR:", err);
-    res.status(500).json({ error: "image processing failed" });
+    console.error(err);
+    res.status(500).json({ error: "upload failed" });
   }
 });
 
 module.exports = router;
+
 
 
