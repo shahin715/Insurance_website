@@ -15,6 +15,8 @@ app.use('/api/sections', require('./src/routes/section.routes'))
 app.use('/api/settings', require('./src/routes/settings.routes'))
 app.use('/api/menu', require('./src/routes/menu.routes'))
 app.use('/api/footer', require('./src/routes/footer.routes'))
+app.use("/api/notices", require("./src/routes/notice.routes"));
+
 
 // ✅ reusable upload
 app.use("/api/upload", require("./src/routes/upload.routes"))

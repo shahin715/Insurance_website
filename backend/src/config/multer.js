@@ -1,7 +1,10 @@
 const multer = require("multer");
 const path = require("path");
+const fs = require("fs");
 
-// temp upload folder
+// ensure temp folder exists
+fs.mkdirSync("uploads/tmp", { recursive: true });
+
 const storage = multer.diskStorage({
   destination: (req, file, cb) => {
     cb(null, "uploads/tmp");
@@ -13,10 +16,18 @@ const storage = multer.diskStorage({
 });
 
 function fileFilter(req, file, cb) {
-  if (file.mimetype.startsWith("image/")) {
+  const allowed = [
+    "image/jpeg",
+    "image/png",
+    "image/webp",
+    "image/gif",
+    "application/pdf"
+  ];
+
+  if (allowed.includes(file.mimetype)) {
     cb(null, true);
   } else {
-    cb(new Error("Only images allowed"), false);
+    cb(new Error("Only images and PDF allowed"), false);
   }
 }
 
@@ -24,7 +35,7 @@ module.exports = multer({
   storage,
   fileFilter,
   limits: {
-    fileSize: 8 * 1024 * 1024 // 8MB max
+    fileSize: 12 * 1024 * 1024 // 12MB
   }
 });
 
