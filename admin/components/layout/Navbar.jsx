@@ -96,7 +96,6 @@ export default function Navbar() {
                     </span>
                   </Link>
 
-                  {/* Optional: Preview public site */}
                   {/*
                   <a
                     href="http://localhost:3000"

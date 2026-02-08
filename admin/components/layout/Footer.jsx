@@ -112,7 +112,7 @@ export default function Footer() {
           © {new Date().getFullYear()} {data.copyright}
         </span>
 
-        {/* ✅ ADMIN ONLY EDIT LINK */}
+       
         <Link
           href="/footer-settings"
           className="hover:text-white "

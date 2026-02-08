@@ -9,13 +9,11 @@ export default function NoticeListPage() {
   const [rows, setRows] = useState([]);
   const router = useRouter();
 
-  // safe loader
   const fetchRows = async () => {
     const data = await api("/notices?page=1&limit=50");
     setRows(data.data || []);
   };
 
-  // ✅ effect-safe pattern (no warning)
   useEffect(() => {
     let mounted = true;
 

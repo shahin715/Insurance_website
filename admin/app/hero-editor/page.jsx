@@ -26,7 +26,6 @@ export default function HeroEditor() {
     }));
   }
 
-  // ✅ FIXED IMAGE UPLOAD
   async function uploadImage(file) {
     if (!file) return;
 
