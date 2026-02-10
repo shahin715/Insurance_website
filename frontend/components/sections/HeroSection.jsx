@@ -1,5 +1,4 @@
 "use client";
-
 import { motion } from "framer-motion";
 import Image from "next/image";
 
@@ -19,7 +18,7 @@ export default function HeroSection({ data }) {
           alt={data.title || "Hero"}
           fill
           priority
-          unoptimized // ✅ add this
+          unoptimized
           className="object-cover"
         />
       )}

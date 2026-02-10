@@ -2,10 +2,7 @@ const express = require("express");
 const router = express.Router();
 const db = require("../config/db");
 
-
-// =========================
 // GET section
-// =========================
 router.get("/:key", async (req, res) => {
   try {
     const { key } = req.params;
@@ -49,10 +46,8 @@ router.get("/:key", async (req, res) => {
   }
 });
 
-
-// =========================
 // SAVE section
-// =========================
+
 router.post("/:key", async (req, res) => {
   try {
     const { key } = req.params;
@@ -80,8 +75,6 @@ router.post("/:key", async (req, res) => {
     res.status(500).json({ error: err.message });
   }
 });
-
-
 module.exports = router;
 
 

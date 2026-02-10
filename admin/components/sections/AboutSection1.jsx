@@ -22,7 +22,7 @@ export default function AboutSection1({ showEditIcon = false }) {
   return (
     <section className="relative py-14 bg-white overflow-hidden">
 
-      {/* ⚙️ Admin Edit Shortcut */}
+      {/*  Admin Edit Shortcut */}
       {showEditIcon && (
         <Link
           href="/about/section1"

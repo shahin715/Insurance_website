@@ -43,8 +43,7 @@ export default function HeroEditor() {
     );
 
     const json = await res.json();
-
-    // ✅ store relative path only
+    
     update("imageUrl", json.url);
 
     setUploading(false);

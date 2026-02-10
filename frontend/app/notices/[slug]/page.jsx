@@ -13,7 +13,6 @@ async function getNotice(slug) {
 
 export default async function NoticeDetailPage({ params }) {
 
-  // ✅ Next.js 16 fix
   const { slug } = await params;
 
   const notice = await getNotice(slug);

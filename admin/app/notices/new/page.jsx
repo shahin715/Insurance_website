@@ -173,7 +173,7 @@ export default function NewNoticePage() {
   );
 }
 
-/* ---------- Small UI Helpers ---------- */
+/* Small UI Helpers  */
 
 function Field({ label, children }) {
   return (

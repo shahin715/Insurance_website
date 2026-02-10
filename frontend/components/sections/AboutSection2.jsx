@@ -16,7 +16,7 @@ export default function AboutSection2() {
 
   const mission = data.mission_text || "";
 
-  // ✅ split paragraphs safely
+  
   const paragraphs = mission
     .split("\n")
     .map(p => p.trim())
@@ -59,19 +59,19 @@ export default function AboutSection2() {
             Our Mission
           </h2>
 
-          {/* ✅ always show first paragraph */}
+          {/* always show first paragraph */}
           <p className="text-gray-600 leading-8">
             {firstParagraph}
           </p>
 
-          {/* ✅ show rest only when expanded */}
+          {/* show rest only when expanded */}
           {expanded && restParagraphs.map((p, i) => (
             <p key={i} className="text-gray-600 leading-8">
               {p}
             </p>
           ))}
 
-          {/* ✅ Read More button */}
+          {/* Read More button */}
           {restParagraphs.length > 0 && (
             <button
               onClick={() => setExpanded(v => !v)}

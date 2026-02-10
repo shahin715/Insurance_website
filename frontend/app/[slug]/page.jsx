@@ -27,9 +27,6 @@ export default async function Page({ params }) {
   return (
     <main className="space-y-10">
 
-      {/* Page Title (optional debug) */}
-      {/* <h1 className="text-3xl font-bold">{page.title}</h1> */}
-
       {page.sections?.map(section => {
 
         switch (section.type) {

@@ -10,9 +10,9 @@ function makeSlug(text) {
     .replace(/[^a-z0-9]+/g, "-");
 }
 
-/* ======================================================
+/* 
    CREATE NOTICE
-====================================================== */
+ */
 
 router.post("/", async (req, res) => {
   try {
@@ -41,9 +41,9 @@ router.post("/", async (req, res) => {
 });
 
 
-/* ======================================================
+/* 
    LIST WITH PAGINATION (ADMIN + FRONTEND)
-====================================================== */
+ */
 
 router.get("/", async (req, res) => {
   try {
@@ -78,10 +78,9 @@ router.get("/", async (req, res) => {
 });
 
 
-/* ======================================================
-   GET SINGLE BY ID  ✅ (ADMIN DETAIL USES THIS)
-   MUST COME BEFORE SLUG ROUTE
-====================================================== */
+/* 
+   GET SINGLE BY ID  
+ */
 
 router.get("/id/:id", async (req, res) => {
   try {
@@ -103,9 +102,9 @@ router.get("/id/:id", async (req, res) => {
 });
 
 
-/* ======================================================
+/*
    GET SINGLE BY SLUG (FRONTEND PUBLIC PAGE)
-====================================================== */
+ */
 
 router.get("/:slug", async (req, res) => {
   try {
@@ -127,9 +126,9 @@ router.get("/:slug", async (req, res) => {
 });
 
 
-/* ======================================================
+/* 
    UPDATE
-====================================================== */
+ */
 
 router.put("/:id", async (req, res) => {
   try {

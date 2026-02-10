@@ -24,7 +24,7 @@ export default function AboutSection3() {
 
      
 
-      {/* 🔷 Diamond watermark */}
+      {/*  Diamond watermark */}
       <div className="absolute inset-0 pointer-events-none">
         <div
           className="absolute top-6 left-6 w-[420px] h-[420px] opacity-10 bg-no-repeat bg-contain"
