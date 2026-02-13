@@ -15,7 +15,7 @@ export default async function NoticesPage() {
   return (
     <div className="max-w-6xl mx-auto px-6 py-10">
 
-      {/* header — no new button */}
+      {/* header  */}
       <div className="mb-8">
         <h1 className="text-3xl font-bold">
           Notices

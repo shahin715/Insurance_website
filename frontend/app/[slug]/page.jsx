@@ -25,7 +25,7 @@ export default async function Page({ params }) {
   }
 
   return (
-    <main className="space-y-10">
+    <main className="space-y-10 ">
 
       {page.sections?.map(section => {
 
