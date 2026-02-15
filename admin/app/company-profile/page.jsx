@@ -52,6 +52,7 @@ export default function AdminCompanyProfilePage() {
     <div className="bg-[#f6f3fb] min-h-screen pb-24">
 
       {/*  HEADER  */}
+      
 
       <div className="bg-white border-b border-purple-100">
         <div className="max-w-7xl mx-auto px-6 py-12 flex justify-between items-start">
