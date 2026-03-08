@@ -46,7 +46,7 @@ export default async function NoticesPage() {
               {/* date badge */}
               <div className="
                 w-20 shrink-0
-                bg-gradient-to-br from-[#B34AA0] to-[#7A1E6A]
+                bg-linear-to-br from-[#B34AA0] to-[#7A1E6A]
                 text-white rounded-lg
                 text-center py-3
                 shadow-sm
@@ -83,7 +83,7 @@ export default async function NoticesPage() {
                 <Link
                   href={`/notices/${n.slug}`}
                   className="
-                    bg-gradient-to-br from-[#B34AA0] to-[#7A1E6A]
+                    bg-linear-to-br from-[#B34AA0] to-[#7A1E6A]
                     text-white text-sm font-semibold
                     px-3.5 py-2 rounded-lg
                     shadow-sm hover:shadow

@@ -10,7 +10,7 @@ export default function HeroSection({ data }) {
     : null;
 
   return (
-    <section className="relative w-full h-[420px] md:h-[520px] overflow-hidden">
+    <section className="relative w-full h-105 md:h-130 overflow-hidden">
       {/* Background Image */}
       {imageSrc && (
         <Image
@@ -24,7 +24,7 @@ export default function HeroSection({ data }) {
       )}
 
       {/* Overlay */}
-      <div className="absolute inset-0 bg-gradient-to-r from-purple-900/85 via-purple-800/60 to-purple-700/30" />
+   <div className="absolute inset-0 bg-linear-to-r from-white/10 via-white/20 to-transparent" />
 
       {/* Content */}
       <motion.div
@@ -33,7 +33,7 @@ export default function HeroSection({ data }) {
         transition={{ duration: 0.8 }}
         className="absolute inset-0 flex items-center"
       >
-        <div className="max-w-xl px-6 md:px-12 text-white">
+        <div className="max-w-xl px-6 md:px-12 text-[#7A1E6A]">
           {/* Title */}
           {data.title && (
             <h1 className="text-2xl md:text-4xl font-bold mb-4">
@@ -43,7 +43,7 @@ export default function HeroSection({ data }) {
 
           {/* Subtitle */}
           {data.subtitle && (
-            <p className="text-sm md:text-base text-gray-200 mb-6">
+            <p className="text-sm md:text-base text-black mb-6">
               {data.subtitle}
             </p>
           )}
@@ -55,7 +55,7 @@ export default function HeroSection({ data }) {
                 href={data.primaryBtnLink || "#"}
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
-                className="bg-gradient-to-br from-[#B34AA0] to-[#7A1E6A] px-6 py-3 rounded-md font-medium text-center"
+                className="bg-linear-to-br from-[#B34AA0] to-[#7A1E6A] text-white px-6 py-3 rounded-md font-medium text-center"
               >
                 {data.primaryBtnText}
               </motion.a>

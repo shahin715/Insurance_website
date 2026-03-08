@@ -60,7 +60,7 @@ export default function NoticeDetailPage() {
 
         {/* header */}
         <div className="
-          bg-gradient-to-br from-[#B34AA0] to-[#7A1E6A]
+          bg-linear-to-br from-[#B34AA0] to-[#7A1E6A]
           text-white p-8
         ">
           <h1 className="text-2xl font-bold leading-snug">

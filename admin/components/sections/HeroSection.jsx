@@ -8,7 +8,7 @@ export default function HeroSection({ data }) {
   const d = typeof data === "string" ? JSON.parse(data) : data;
 
   return (
-    <section className="relative w-full h-[560px] overflow-hidden">
+    <section className="relative w-full h-140 overflow-hidden">
 
       {/* Background Image */}
       {d.imageUrl && (
@@ -20,7 +20,7 @@ export default function HeroSection({ data }) {
       )}
 
       {/* Gradient Overlay */}
-      <div className="absolute inset-0 bg-gradient-to-r from-purple-900/70 via-purple-800/60 to-purple-700/40" />
+     <div className="absolute inset-0 bg-linear-to-r from-white/90 via-white/50 to-transparent" />
 
       {/* ⚙️ Settings Button — Admin only */}
       <Link
@@ -33,13 +33,13 @@ export default function HeroSection({ data }) {
 
       {/* Content */}
       <div className="relative z-10 h-full max-w-7xl mx-auto px-6 flex items-center">
-        <div className="max-w-2xl text-left text-white">
+         <div className="max-w-xl px-6 md:px-12 text-[#7A1E6A]">
 
           <h1 className="text-4xl md:text-5xl font-bold leading-tight mb-5">
             {d.title}
           </h1>
 
-          <p className="text-lg md:text-xl opacity-95 mb-8">
+          <p className="text-lg md:text-xl text-black opacity-95 mb-8">
             {d.subtitle}
           </p>
 
@@ -48,7 +48,7 @@ export default function HeroSection({ data }) {
             {d.primaryBtnLink && (
               <a
                 href={d.primaryBtnLink}
-                className="bg-white text-purple-900 px-7 py-3 rounded-lg font-semibold hover:bg-purple-100 transition"
+                 className="bg-linear-to-br from-[#B34AA0] to-[#7A1E6A] text-white px-6 py-3 rounded-md font-medium text-center"
               >
                 {d.primaryBtnText}
               </a>
@@ -57,7 +57,7 @@ export default function HeroSection({ data }) {
             {d.secondaryBtnLink && (
               <a
                 href={d.secondaryBtnLink}
-                className="border border-white px-7 py-3 rounded-lg hover:bg-white hover:text-purple-900 transition"
+className="bg-white text-[#7A1E6A] px-6 py-3 rounded-md font-medium text-center"
               >
                 {d.secondaryBtnText}
               </a>

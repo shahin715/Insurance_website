@@ -34,30 +34,27 @@ export default function PrivacyPolicyPage() {
       {/* ================= HERO ================= */}
 
       <div className="
-        relative overflow-hidden
-        bg-gradient-to-br
-        from-purple-500
-        via-purple-800
-        to-purple-300
+        relative 
+       bg-white overflow-hidden
       ">
 
         <div className="max-w-7xl mx-auto px-6 py-16 grid lg:grid-cols-2 gap-10 items-center">
 
           {/* LEFT TEXT */}
-          <div className="text-white">
+          <div className="text-[#7A1E6A]">
 
-            <h1 className="text-4xl md:text-5xl font-bold mb-6">
+            <h1 className="text-4xl md:text-4xl font-bold mb-6">
               {data.hero_title}
             </h1>
 
-            <p className="text-white/90 leading-relaxed text-lg">
+            <p className="text-[#7A1E6A] leading-relaxed text-lg">
               {data.hero_text}
             </p>
 
           </div>
 
           {/* RIGHT IMAGE */}
-          <div className="relative h-[260px] lg:h-[320px]">
+          <div className="relative h-65 lg:h-80">
 
             <Image
               src="/privacy-hero.png"
@@ -88,14 +85,14 @@ export default function PrivacyPolicyPage() {
 
             <div className="
               w-1.5 h-10 rounded-full
-              bg-gradient-to-b
+              bg-linear-to-b
               from-[#B34AA0]
               to-[#7A1E6A]
             " />
 
             <h2 className="
               text-2xl md:text-3xl font-bold
-              bg-gradient-to-br
+              bg-linear-to-br
               from-[#B34AA0]
               to-[#7A1E6A]
               bg-clip-text text-transparent

@@ -12,9 +12,9 @@ export default function AboutSection1Preview({ title, content, image }) {
 
           <div className="space-y-5">
 
-            <div className="w-12 h-1 rounded bg-gradient-to-br from-[#B34AA0] to-[#7A1E6A]" />
+            <div className="w-12 h-1 rounded bg-linear-to-br from-[#B34AA0] to-[#7A1E6A]" />
 
-            <h2 className="text-2xl font-bold bg-gradient-to-br from-[#B34AA0] to-[#7A1E6A] bg-clip-text text-transparent">
+            <h2 className="text-2xl font-bold bg-linear-to-br from-[#B34AA0] to-[#7A1E6A] bg-clip-text text-transparent">
               {title}
             </h2>
 

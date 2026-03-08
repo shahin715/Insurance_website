@@ -18,16 +18,15 @@ app.use('/api/footer', require('./src/routes/footer.routes'))
 app.use("/api/notices", require("./src/routes/notice.routes"));
 
 
-// ✅ reusable upload
+//  reusable upload
 app.use("/api/upload", require("./src/routes/upload.routes"))
 
-// ✅ about cms data
+// about cms data
 app.use("/api/about", require("./src/routes/about.routes"))
 
-// ✅ static uploads serve (only once)
+//  static uploads serve (only once)
 app.use("/uploads", express.static("uploads"))
 
-// health
 app.get('/', (req, res) => {
   res.json({ status: 'API running' })
 })

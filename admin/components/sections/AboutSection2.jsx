@@ -62,9 +62,9 @@ export default function AboutSection2({ showEditIcon = false }) {
         {/* RIGHT TEXT */}
         <div className="space-y-6">
 
-          <div className="w-14 h-1 bg-gradient-to-br from-[#B34AA0] to-[#7A1E6A] rounded" />
+          <div className="w-14 h-1 bg-linear-to-br from-[#B34AA0] to-[#7A1E6A] rounded" />
 
-          <h2 className="text-3xl font-bold bg-gradient-to-br from-[#B34AA0] to-[#7A1E6A] bg-clip-text text-transparent">
+          <h2 className="text-3xl font-bold bg-linear-to-br from-[#B34AA0] to-[#7A1E6A] bg-clip-text text-transparent">
             Our Mission
           </h2>
 
@@ -78,7 +78,7 @@ export default function AboutSection2({ showEditIcon = false }) {
             <button
               onClick={() => setExpanded(v => !v)}
               className="px-5 py-2 rounded-lg text-white font-semibold shadow-sm
-                         bg-gradient-to-br from-[#B34AA0] to-[#7A1E6A]
+                         bg-linear-to-br from-[#B34AA0] to-[#7A1E6A]
                          hover:opacity-90 transition"
             >
               {expanded ? "Read Less" : "Read More"}

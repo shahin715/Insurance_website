@@ -2,7 +2,7 @@ const express = require("express");
 const router = express.Router();
 const pool = require("../config/db");
 
-// ---------- slug generator ----------
+// slug generator 
 function makeSlug(text) {
   return text
     .toLowerCase()
@@ -166,9 +166,9 @@ router.put("/:id", async (req, res) => {
 });
 
 
-/* ======================================================
+/* 
    DELETE
-====================================================== */
+ */
 
 router.delete("/:id", async (req, res) => {
   try {

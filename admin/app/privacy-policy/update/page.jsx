@@ -47,7 +47,7 @@ export default function PrivacyPolicyEditor() {
     });
 
     setSaving(false);
-    alert("Saved ✅");
+    alert("Saved ");
   };
 
   if (loading) {
@@ -106,7 +106,7 @@ export default function PrivacyPolicyEditor() {
   );
 }
 
-/* ---------- small inputs ---------- */
+/*  small inputs */
 
 function Field({ label, value, onChange }) {
   return (

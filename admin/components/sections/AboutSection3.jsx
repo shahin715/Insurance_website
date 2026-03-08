@@ -35,7 +35,7 @@ export default function AboutSection3({ showEditIcon = false }) {
       {/* Diamond watermark */}
       <div className="absolute inset-0 pointer-events-none">
         <div
-          className="absolute top-6 left-6 w-[420px] h-[420px] opacity-10 bg-no-repeat bg-contain"
+          className="absolute top-6 left-6 w-105 h-105 opacity-10 bg-no-repeat bg-contain"
           style={{ backgroundImage: "url('/bgdimon.png')" }}
         />
       </div>
@@ -47,9 +47,9 @@ export default function AboutSection3({ showEditIcon = false }) {
           {/* LEFT TEXT */}
           <div className="space-y-6">
 
-            <div className="w-14 h-1 rounded bg-gradient-to-br from-[#B34AA0] to-[#7A1E6A]" />
+            <div className="w-14 h-1 rounded bg-linear-to-br from-[#B34AA0] to-[#7A1E6A]" />
 
-            <h2 className="text-3xl font-bold bg-gradient-to-br from-[#B34AA0] to-[#7A1E6A] bg-clip-text text-transparent">
+            <h2 className="text-3xl font-bold bg-linear-to-br from-[#B34AA0] to-[#7A1E6A] bg-clip-text text-transparent">
               {data.title}
             </h2>
 
@@ -63,7 +63,7 @@ export default function AboutSection3({ showEditIcon = false }) {
               <button
                 onClick={() => setExpanded(v => !v)}
                 className="px-5 py-2 rounded-lg text-white font-semibold shadow-sm
-                           bg-gradient-to-br from-[#B34AA0] to-[#7A1E6A]
+                           bg-linear-to-br from-[#B34AA0] to-[#7A1E6A]
                            hover:opacity-90 transition"
               >
                 {expanded ? "Read Less" : "Read More"}

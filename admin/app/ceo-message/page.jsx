@@ -32,7 +32,7 @@ export default function AdminCEOPreview() {
         <Link
           href="/ceo-message/update-message"
           className="
-            bg-gradient-to-br from-[#B34AA0] to-[#7A1E6A]
+            bg-linear-to-br from-[#B34AA0] to-[#7A1E6A]
             text-white text-sm font-semibold
             px-4 py-2 rounded-lg shadow
             hover:opacity-90 transition
@@ -54,7 +54,7 @@ export default function AdminCEOPreview() {
           text-center
           text-xl sm:text-2xl md:text-3xl
           font-bold
-          bg-gradient-to-br from-[#B34AA0] to-[#7A1E6A]
+          bg-linear-to-br from-[#B34AA0] to-[#7A1E6A]
           bg-clip-text text-transparent
           mb-8 md:mb-12
           tracking-wide
@@ -79,7 +79,7 @@ export default function AdminCEOPreview() {
               flex justify-center
             ">
               <div className="
-                w-full max-w-[340px]
+                w-full max-w-85
                 bg-gray-50
                 p-2 md:p-3
                 rounded-xl
@@ -95,7 +95,7 @@ export default function AdminCEOPreview() {
                     rounded-lg
                     object-cover
                     w-full
-                    h-[320px] sm:h-[380px] md:h-[420px]
+                    h-80 sm:h-95 md:h-105
                   "
                 />
               </div>
@@ -105,7 +105,7 @@ export default function AdminCEOPreview() {
           {/*  TEXT SIDE  */}
           <div className="
             order-2 lg:order-1
-            max-w-none lg:max-w-[720px]
+            max-w-none lg:max-w-180
           ">
 
             {/* lead paragraph */}
@@ -144,7 +144,7 @@ export default function AdminCEOPreview() {
               <div className="
                 text-base md:text-lg
                 font-semibold
-                bg-gradient-to-br from-[#B34AA0] to-[#7A1E6A]
+                bg-linear-to-br from-[#B34AA0] to-[#7A1E6A]
                 bg-clip-text text-transparent
               ">
                 {data.ceo_name}

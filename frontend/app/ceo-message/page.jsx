@@ -45,7 +45,7 @@ export default async function CEOMessagePage() {
       {/* Title */}
       <h1 className="
         text-center text-3xl md:text-4xl font-bold mb-12
-        bg-gradient-to-br from-[#B34AA0] to-[#7A1E6A]
+        bg-linear-to-br from-[#B34AA0] to-[#7A1E6A]
         bg-clip-text text-transparent
       ">
         CEO Message
@@ -85,7 +85,7 @@ export default async function CEOMessagePage() {
           <div className="mt-10 pt-6 border-t">
             <div className="
               text-lg font-semibold
-              bg-gradient-to-br from-[#B34AA0] to-[#7A1E6A]
+              bg-linear-to-br from-[#B34AA0] to-[#7A1E6A]
               bg-clip-text text-transparent
             ">
               {data.ceo_name}

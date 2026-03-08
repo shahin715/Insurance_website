@@ -36,10 +36,10 @@ export default function AboutSection1() {
           <div className="space-y-6">
 
             {/* accent line with gradient */}
-            <div className="w-14 h-1 rounded bg-gradient-to-br from-[#B34AA0] to-[#7A1E6A]" />
+            <div className="w-14 h-1 rounded bg-linear-to-br from-[#B34AA0] to-[#7A1E6A]" />
 
             {/* Gradient Heading */}
-            <h2 className="text-3xl font-bold bg-gradient-to-br from-[#B34AA0] to-[#7A1E6A] bg-clip-text text-transparent">
+            <h2 className="text-3xl font-bold bg-linear-to-br from-[#B34AA0] to-[#7A1E6A] bg-clip-text text-transparent">
               {data.title}
             </h2>
 
@@ -55,7 +55,7 @@ export default function AboutSection1() {
               <button
                 onClick={() => setExpanded(v => !v)}
                 className="px-5 py-2 rounded-lg text-white font-semibold shadow-sm
-                           bg-gradient-to-br from-[#B34AA0] to-[#7A1E6A]
+                           bg-linear-to-br from-[#B34AA0] to-[#7A1E6A]
                            hover:opacity-90 transition"
               >
                 {expanded ? "Read Less" : "Read More"}

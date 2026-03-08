@@ -58,10 +58,10 @@ export default function AdminCompanyProfilePage() {
         <div className="max-w-7xl mx-auto px-6 py-12 flex justify-between items-start">
 
           <div className="flex items-start gap-5">
-            <div className="w-1 h-16 bg-gradient-to-b from-[#B34AA0] to-[#7A1E6A] rounded-full" />
+            <div className="w-1 h-16 bg-linear-to-b from-[#B34AA0] to-[#7A1E6A] rounded-full" />
 
             <div>
-              <h1 className="text-4xl font-bold bg-gradient-to-br from-[#B34AA0] to-[#7A1E6A] bg-clip-text text-transparent">
+              <h1 className="text-4xl font-bold bg-linear-to-br from-[#B34AA0] to-[#7A1E6A] bg-clip-text text-transparent">
                 Company Profile
               </h1>
 
@@ -74,7 +74,7 @@ export default function AdminCompanyProfilePage() {
           {/* ADMIN EDIT BUTTON */}
           <Link
             href="/company-profile/update"
-            className="px-5 py-2.5 rounded-lg text-sm font-semibold text-white bg-gradient-to-br from-[#B34AA0] to-[#7A1E6A] shadow-md hover:opacity-90 transition"
+            className="px-5 py-2.5 rounded-lg text-sm font-semibold text-white bg-linear-to-br from-[#B34AA0] to-[#7A1E6A] shadow-md hover:opacity-90 transition"
           >
             Edit Profile
           </Link>
@@ -88,7 +88,7 @@ export default function AdminCompanyProfilePage() {
         <div className="bg-white rounded-2xl shadow-xl border border-purple-100 overflow-hidden">
 
           <div className="px-8 py-5 bg-purple-50 border-b border-purple-100">
-            <div className="text-lg font-semibold bg-gradient-to-br from-[#B34AA0] to-[#7A1E6A] bg-clip-text text-transparent">
+            <div className="text-lg font-semibold bg-linear-to-br from-[#B34AA0] to-[#7A1E6A] bg-clip-text text-transparent">
               Registration & Capital Details
             </div>
           </div>
@@ -114,7 +114,7 @@ export default function AdminCompanyProfilePage() {
           </div>
 
           <div>
-            <div className="inline-block px-4 py-1 rounded-full text-sm mb-4 text-white bg-gradient-to-br from-[#B34AA0] to-[#7A1E6A]">
+            <div className="inline-block px-4 py-1 rounded-full text-sm mb-4 text-white bg-linear-to-br from-[#B34AA0] to-[#7A1E6A]">
               Head Office
             </div>
 
@@ -125,7 +125,7 @@ export default function AdminCompanyProfilePage() {
             <a
               href="https://maps.google.com"
               target="_blank"
-              className="inline-flex items-center gap-2 mt-5 px-5 py-2.5 rounded-lg text-white text-sm font-semibold bg-gradient-to-br from-[#B34AA0] to-[#7A1E6A] shadow-md hover:opacity-90"
+              className="inline-flex items-center gap-2 mt-5 px-5 py-2.5 rounded-lg text-white text-sm font-semibold bg-linear-to-br from-[#B34AA0] to-[#7A1E6A] shadow-md hover:opacity-90"
             >
               <MapPin size={16} />
               View on Map
@@ -149,7 +149,7 @@ export default function AdminCompanyProfilePage() {
       {/*  BANKERS  */}
 
       <div className="max-w-7xl mx-auto px-6 mt-14">
-        <div className="text-lg font-semibold mb-6 bg-gradient-to-br from-[#B34AA0] to-[#7A1E6A] bg-clip-text text-transparent">
+        <div className="text-lg font-semibold mb-6 bg-linear-to-br from-[#B34AA0] to-[#7A1E6A] bg-clip-text text-transparent">
           Bankers
         </div>
 
@@ -168,14 +168,14 @@ export default function AdminCompanyProfilePage() {
       {/*  CONTACT  */}
 
       <div className="max-w-7xl mx-auto px-6 mt-16">
-        <div className="rounded-2xl bg-gradient-to-br from-white to-purple-50 border border-purple-100 shadow-sm p-8">
+        <div className="rounded-2xl bg-linear-to-br from-white to-purple-50 border border-purple-100 shadow-sm p-8">
 
           <div className="flex items-center gap-3 mb-6">
-            <div className="w-9 h-9 rounded-lg text-white flex items-center justify-center bg-gradient-to-br from-[#B34AA0] to-[#7A1E6A]">
+            <div className="w-9 h-9 rounded-lg text-white flex items-center justify-center bg-linear-to-br from-[#B34AA0] to-[#7A1E6A]">
               +
             </div>
 
-            <div className="text-lg font-semibold bg-gradient-to-br from-[#B34AA0] to-[#7A1E6A] bg-clip-text text-transparent">
+            <div className="text-lg font-semibold bg-linear-to-br from-[#B34AA0] to-[#7A1E6A] bg-clip-text text-transparent">
               Contact Information
             </div>
           </div>
@@ -211,7 +211,7 @@ function Row({ icon: Icon, label, value, last }) {
       </div>
 
       <div>
-        <div className="text-sm font-semibold bg-gradient-to-br from-[#B34AA0] to-[#7A1E6A] bg-clip-text text-transparent">
+        <div className="text-sm font-semibold bg-linear-to-br from-[#B34AA0] to-[#7A1E6A] bg-clip-text text-transparent">
           {label}
         </div>
         <div className="text-gray-900 font-medium mt-1">{value}</div>
@@ -232,7 +232,7 @@ function SimpleBox({ icon: Icon, title, children }) {
       </div>
 
       <div>
-        <div className="text-sm font-semibold bg-gradient-to-br from-[#B34AA0] to-[#7A1E6A] bg-clip-text text-transparent">
+        <div className="text-sm font-semibold bg-linear-to-br from-[#B34AA0] to-[#7A1E6A] bg-clip-text text-transparent">
           {title}
         </div>
 
@@ -250,7 +250,7 @@ function ContactRow({ icon: Icon, label, value }) {
     <div className="flex items-center gap-3 text-gray-800">
       <Icon className="text-[#7A1E6A]" size={18} />
       <div>
-        <div className="text-sm font-semibold bg-gradient-to-br from-[#B34AA0] to-[#7A1E6A] bg-clip-text text-transparent">
+        <div className="text-sm font-semibold bg-linear-to-br from-[#B34AA0] to-[#7A1E6A] bg-clip-text text-transparent">
           {label}
         </div>
         <div className="font-medium">{value}</div>

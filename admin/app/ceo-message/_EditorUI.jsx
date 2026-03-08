@@ -37,12 +37,12 @@ export default function EditorUI({ form, setForm, save, saving, onCancel }) {
 
       <div className="
         mb-8 p-6 rounded-2xl
-        bg-gradient-to-r from-[#B34AA0]/10 to-[#7A1E6A]/10
+        bg-linear-to-r from-[#B34AA0]/10 to-[#7A1E6A]/10
         border
       ">
         <h1 className="
           text-2xl md:text-3xl font-bold
-          bg-gradient-to-br from-[#B34AA0] to-[#7A1E6A]
+          bg-linear-to-br from-[#B34AA0] to-[#7A1E6A]
           bg-clip-text text-transparent
         ">
           Update CEO Message
@@ -147,7 +147,7 @@ export default function EditorUI({ form, setForm, save, saving, onCancel }) {
 
           {imgSrc && (
             <div className="
-              relative mt-6 w-full h-[360px]
+              relative mt-6 w-full h-90
               rounded-xl overflow-hidden border
             ">
               <Image
@@ -183,7 +183,7 @@ export default function EditorUI({ form, setForm, save, saving, onCancel }) {
           onClick={save}
           disabled={saving}
           className="
-            bg-gradient-to-br from-[#B34AA0] to-[#7A1E6A]
+            bg-linear-to-br from-[#B34AA0] to-[#7A1E6A]
             text-white px-8 py-3 rounded-xl
             font-semibold shadow
             hover:opacity-90 transition
