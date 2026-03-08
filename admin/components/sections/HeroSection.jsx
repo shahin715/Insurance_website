@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 
 export default function HeroSection({ data }) {
   if (!data) return null;
@@ -11,13 +12,15 @@ export default function HeroSection({ data }) {
     <section className="relative w-full h-140 overflow-hidden">
 
       {/* Background Image */}
-      {d.imageUrl && (
-        <img
-          src={`http://127.0.0.1:5000${d.imageUrl}`}
-          alt="hero"
-          className="absolute inset-0 w-full h-full object-cover"
-        />
-      )}
+    {d.imageUrl && (
+  <Image
+    src={`http://127.0.0.1:5000${d.imageUrl}`}
+    alt="hero"
+    fill
+    className="absolute inset-0 object-cover"
+    priority
+  />
+)}
 
       {/* Gradient Overlay */}
      <div className="absolute inset-0 bg-linear-to-r from-white/90 via-white/50 to-transparent" />
